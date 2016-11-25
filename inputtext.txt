@@ -1,3 +1,5 @@
-cat dog cow
-dog cow
-dog
+cat dog cow mouse buffalo
+dog cow mouse 
+dog mouse buffalo
+mouse cat
+dog cat mouse

@@ -1,0 +1,6 @@
+**********One Item Set***********
+'buffalo': 2.0, 'mouse': 5.0, 'dog': 4.0, 'cow': 2.0, 'cat': 3.0, 
+**********Two Item Set***********
+'('cat', 'mouse')': 3.0, '('dog', 'cat')': 2.0, '('buffalo', 'mouse')': 2.0, '('dog', 'mouse')': 4.0, '('dog', 'cow')': 2.0, '('buffalo', 'cat')': 1.0, '('cat', 'cow')': 1.0, '('buffalo', 'dog')': 2.0, '('buffalo', 'cow')': 1.0, 
+**********Three Item Set***********
+'('dog', 'cow', 'cat')': 1.0, '('buffalo', 'mouse', 'dog')': 1.0, '('cat', 'mouse', 'dog')': 1.0, '('dog', 'cow', 'buffalo')': 1.0, '('cat', 'cow', 'buffalo')': 1.0, '('cat', 'mouse', 'buffalo')': 1.0, 
