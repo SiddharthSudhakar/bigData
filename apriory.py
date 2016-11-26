@@ -268,11 +268,12 @@ def main(argv):
    outputfile = ''
    minsuccess = ''
    try:
-      opts, args = getopt.getopt(argv,"i:o:m",["ifile=","ofile=", "msupport="])
+      opts, args = getopt.getopt(argv,"i:o:s:c:",["ifile=","ofile=", "msupport=", "mconfidence="])
    except getopt.GetoptError:
       print 'apriory.py -i <inputfile> -o <outputfile>'
       sys.exit(2)
    for opt, arg in opts:
+      print "opt,args: ",opt, arg
       if opt == '-h':
           print 'apriory.py -i <inputfile> -o <outputfile>'
           sys.exit()
