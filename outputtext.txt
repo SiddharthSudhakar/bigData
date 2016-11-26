@@ -1,6 +1,50 @@
-**********One Item Set***********
+
+ **********One Item Set***********
 'buffalo': 2.0, 'mouse': 5.0, 'dog': 4.0, 'cow': 2.0, 'cat': 3.0, 
-**********Two Item Set***********
+
+ **********Two Item Set***********
 '('cat', 'mouse')': 3.0, '('dog', 'cat')': 2.0, '('buffalo', 'mouse')': 2.0, '('dog', 'mouse')': 4.0, '('dog', 'cow')': 2.0, '('buffalo', 'cat')': 1.0, '('cat', 'cow')': 1.0, '('buffalo', 'dog')': 2.0, '('buffalo', 'cow')': 1.0, 
-**********Three Item Set***********
+
+ **********Three Item Set***********
 '('dog', 'cow', 'cat')': 1.0, '('buffalo', 'mouse', 'dog')': 1.0, '('cat', 'mouse', 'dog')': 1.0, '('dog', 'cow', 'buffalo')': 1.0, '('cat', 'cow', 'buffalo')': 1.0, '('cat', 'mouse', 'buffalo')': 1.0, 
+
+ **********Main Assoc: ***********
+
+ ('dog', 'cow') => ('cat', 'mouse') = [0.5, 0.0]
+ ('buffalo', 'dog') => ('cow', 'cat') = [0.5, 0.0]
+ ('buffalo', 'dog') => ('cat', 'mouse') = [0.5, 0.0]
+ ('cat', 'cow') => ('dog',) = [1.0, 0.0]
+ ('cat', 'cow') => ('buffalo',) = [1.0, 0.0]
+ ('buffalo', 'cat') => ('dog', 'cow') = [1.0, 0.0]
+ ('buffalo',) => ('cat', 'mouse', 'dog') = [0.5, 0.0]
+ ('buffalo', 'mouse') => ('cat', 'cow') = [0.5, 0.0]
+ ('dog', 'cow') => ('cat', 'buffalo') = [0.5, 0.0]
+ ('buffalo', 'dog') => ('cat', 'cow') = [0.5, 0.0]
+ ('cat', 'cow') => ('mouse', 'dog') = [1.0, 0.0]
+ ('buffalo', 'cow') => ('cat', 'mouse', 'dog') = [1.0, 0.0]
+ ('buffalo',) => ('cat', 'cow') = [0.5, 0.0]
+ ('buffalo', 'cat') => ('cow',) = [1.0, 0.0]
+ ('dog', 'cat') => ('mouse',) = [0.5, 0.0]
+ ('cow',) => ('cat', 'mouse', 'dog') = [0.5, 0.0]
+ ('dog', 'cat') => ('cow', 'buffalo') = [0.5, 0.0]
+ ('buffalo', 'mouse') => ('dog', 'cow', 'cat') = [0.5, 0.0]
+ ('cow',) => ('dog', 'cat') = [0.5, 0.0]
+ ('buffalo',) => ('dog', 'cow', 'cat') = [0.5, 0.0]
+ ('dog', 'cat') => ('cow',) = [0.5, 0.0]
+ ('buffalo', 'mouse') => ('cat', 'dog') = [0.5, 0.0]
+ ('buffalo', 'cow') => ('cat',) = [1.0, 0.0]
+ ('buffalo', 'cow') => ('dog', 'cat') = [1.0, 0.0]
+ ('dog', 'cow') => ('cat',) = [0.5, 0.0]
+ ('cow',) => ('cat', 'buffalo') = [0.5, 0.0]
+ ('buffalo', 'cat') => ('mouse', 'dog') = [1.0, 0.0]
+ **********Full Assoc: ***********
+
+ ('cat', 'cow') => ('mouse', 'dog') = [1.0, 0.0]
+ ('buffalo', 'cow') => ('cat', 'mouse', 'dog') = [1.0, 0.0]
+ ('buffalo', 'cow') => ('cat',) = [1.0, 0.0]
+ ('buffalo', 'cow') => ('dog', 'cat') = [1.0, 0.0]
+ ('cat', 'cow') => ('buffalo',) = [1.0, 0.0]
+ ('buffalo', 'cat') => ('dog', 'cow') = [1.0, 0.0]
+ ('buffalo', 'cat') => ('mouse', 'dog') = [1.0, 0.0]
+ ('buffalo', 'cat') => ('cow',) = [1.0, 0.0]
+ ('cat', 'cow') => ('dog',) = [1.0, 0.0]

@@ -28,17 +28,31 @@ def assocprint(assoc):
     for key in key_pair:
         print "\n ",key[0]," => ",key[1]," = ",assoc[key]
 
+def assocopwrite(outputfile, label, assoc):
+    # Print original file
+    print "***Output File written -*****************"
+    try:
+        file = open(outputfile, 'a')
+    except:
+        print 'File cannot be opened:', outputfile
+        exit()
+    file.write("\n **********" + label + "***********\n")
+    key_pair = assoc.keys()
+    for key in key_pair:
+        file.write("\n "+ str(key[0])+ " => "+ str(key[1]) + " = "+ str(assoc[key]))
+
+    file.close()
 
 def opwrite(outputfile, label, data):
     # Print original file
-    print "***Output File -*****************"
+    print "***Output File written -*****************"
     try:
         file = open(outputfile, 'a')
     except:
         print 'File cannot be opened:', outputfile
         exit()
 
-    file.write("**********"+label+"***********\n")
+    file.write("\n **********"+label+"***********\n")
     keylist = data.keys()
     for key in keylist:
         file.write("\'"+str(key)+"\': "+ str(data[key])+", ")
@@ -230,9 +244,12 @@ def apriory(inputfile, outputfile, minsup, minconf):
                    if (conf == 1.0):
                        fullconfassoc[(complement, tuple(key1))] = [conf, lift]
    print 'Main Assoc: ', mainassoc
+   assocprint(mainassoc)
+   assocopwrite( outputfile , 'Main Assoc: ', mainassoc)
    print 'All Assoc: ', allassoc
    print 'Full Assoc: ', fullconfassoc
    assocprint(fullconfassoc)
+   assocopwrite(outputfile, 'Full Assoc: ', fullconfassoc)
 
 
 
@@ -257,22 +274,24 @@ def main(argv):
       sys.exit(2)
    for opt, arg in opts:
       if opt == '-h':
-         print 'apriory.py -i <inputfile> -o <outputfile>'
-         sys.exit()
+          print 'apriory.py -i <inputfile> -o <outputfile>'
+          sys.exit()
       elif opt in ("-i", "--ifile"):
-         inputfile = arg
+          inputfile = arg
       elif opt in ("-o", "--ofile"):
-         outputfile = arg
+          outputfile = arg
       elif opt in ("-s", "--support"):
-         minsupport = float(arg)
-      elif opt in ("-c", "--confidence"):
           minsupport = float(arg)
-   ''' Enable for static testing only
+      elif opt in ("-c", "--confidence"):
+          minconfidence = float(arg)
+   '''# Enable for static testing only
    inputfile = 'inputtext.txt'
    outputfile = 'outputtext.txt'
    minconfidence = 0.5
    minsupport = 0.1
    '''
+
+
    apriory(inputfile,outputfile, minsupport, minconfidence)
    print 'Input file is ', inputfile
    print 'Output file is ', outputfile
